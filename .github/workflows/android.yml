@@ -25,4 +25,8 @@ jobs:
       run: |
         chmod 777 gradlew
         ./gradlew assemble
-        
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: apk
+        path: ./app/build/outputs/apk/release/*
